@@ -1,0 +1,27 @@
+
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2021"
+default-run = "cli"
+
+[lib]
+name = "lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "cli"
+path = "cli.rs"
+
+[[bin]]
+name = "gui"
+path = "gui.rs"
+
+[dependencies]
+rand = "*"
+crossterm = "*"
+open = "*"
+tokio = { version = "1", features = ["full"] }
+scraper = "*"
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+
